@@ -28,7 +28,7 @@ func main() {
 		ctx.JSON(iris.StatusOK, user)
 
 	})
-	iris.Listen(":8080")
+	iris.Listen("localhost:8080")
 }
 
 func hi(ctx *iris.Context) {
