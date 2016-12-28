@@ -21,6 +21,8 @@ entr_warn:
 	@echo "See http://entrproject.org/"
 	@echo "----------------------------------------------------------"
 
+watch_echo: 
+	echo `${WATCH_FILES}`
 
 watch_test:
 	if command -v entr > /dev/null; then ${WATCH_FILES} | entr -c $(MAKE) test; else $(MAKE) test entr_warn; fi
